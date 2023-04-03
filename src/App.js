@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import Header from './Components/Header/Header';
+import Upvote from './Components/Upvote/Upvote';
+import Login from './Components/Login/Login';
 import './App.css';
 
 function App() {
+
+  // const login =() => {
+  //     <Login />
+  // };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Header /> */}
+      <h1>Reddit App</h1>
+      {/* <button >Login</button> */}
+      <Login />
+      {/* <Upvote /> */}
     </div>
   );
 }
