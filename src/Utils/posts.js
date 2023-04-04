@@ -12,5 +12,6 @@ const posts = [
             downvotes : 2,
         }
     ];
+    
 
 export default posts;
