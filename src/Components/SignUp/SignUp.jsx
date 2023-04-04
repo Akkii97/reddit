@@ -1,4 +1,7 @@
 import './SignUp.css'
+import users from '../../Utils/Users';
+import Login from '../Login/Login';
+
 import { useState } from "react";
 
 const SignUp = (props) => {
@@ -6,9 +9,27 @@ const SignUp = (props) => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    // const [user, setUser] = useState([]);
 
     const handleSignUp = (e) => {
         e.preventDefault();
+
+       localStorage.setItem('name', name);
+       localStorage.setItem('email',email);
+       localStorage.setItem('password',password);
+
+
+       console.log('Registered Succesfully');
+
+       return(
+        <>
+        <h2>Registered Succesfully</h2>
+        < Login />
+        </>
+        
+
+       )
+    
     }
     return (
 

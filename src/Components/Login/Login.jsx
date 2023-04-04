@@ -1,5 +1,10 @@
 import { useState } from 'react';
 import './Login.css'
+import Upvote from '../Upvote/Upvote';
+import Posts from '../Posts/Posts';
+
+
+
 const Login = (props) => {
 
     const [email, setEmail] = useState('');
@@ -7,6 +12,12 @@ const Login = (props) => {
 
     const onLoginForm = (e) => {
         e.preventDefault();
+
+        return(
+            <Upvote />
+        )
+
+    
     }
 
     return (
@@ -20,7 +31,10 @@ const Login = (props) => {
                     <p>New to Reddit ? <button onClick={() => props.onSwitchForm('signup')}>SignUp</button></p>
                 </form>
             </div>
+
+            <Posts/>
         </div>
+
     );
 };
 
